@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import LanguageData from './Lanaguage/LanaguageContext';
+import { useState } from 'react';
+import HeaderInfo from './Header';
+import LanMyForm from './LanMyForm';
 
 function App() {
+
+  const [lan,setlan]= useState('en');
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LanguageData.Provider value={{lan,setlan}}>
+
+      <HeaderInfo/>
+      <LanMyForm/>
+    
+    </LanguageData.Provider>
   );
 }
 

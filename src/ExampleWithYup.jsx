@@ -1,7 +1,11 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from 'yup';
+import { useNavigate, useNavigation } from "react-router-dom";
 export default function ExampleWithYup() {
+
+
+  const nav1= useNavigate("/");
 
 
    const  validationSchema =()=> {
@@ -37,10 +41,12 @@ export default function ExampleWithYup() {
         acceptTerms: false,
       }}
 
-      validationSchema={validationSchema}
+      //validationSchema={validationSchema}
       
-      onSubmit={function (values) {
-        console.log(values);
+      onSubmit={function (values) 
+        {
+          alert("d");
+        nav1("/");
       }}
     >
 

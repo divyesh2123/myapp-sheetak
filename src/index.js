@@ -11,12 +11,33 @@ import APICallWithAx from './APICallWithAx';
 import MyForm from './MyForm';
 import BasicExampleWithFormk from './BasicExampleWithFormk';
 import ExampleWithYup from './ExampleWithYup';
+import Product from './Product';
+import Registration from './Registration';
+import ExampleOfUserFormik from './ExampleOfUserFormik';
+import Example from './Example';
+import LoginWithMUI from './LoginWithMUI';
+import RegistrationApp from './RegistrationApp';
+import{ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import HomeList from './HomeList';
+import Button from './Button';
+import MyRouting from './MyRouting';
+import { BrowserRouter } from 'react-router-dom';
+import ExampleMemo from './ExampleMemo';
+import ShowMoreTextToggle from './ShowMoreTextToggle';
 
+ 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+    
+      <MyRouting/>
+
+    </BrowserRouter>
+    
    
-    <ExampleWithYup/>
+    
   </React.StrictMode>
 );
 
