@@ -26,6 +26,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ExampleMemo from './ExampleMemo';
 import ShowMoreTextToggle from './ShowMoreTextToggle';
 import ManageCrud from './ManageCrud';
+import MyAPICall1 from './MyAPICall1';
 
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -33,7 +34,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     
-   <ManageCrud/>
+   <MyAPICall1/>
 
     </BrowserRouter>
     
