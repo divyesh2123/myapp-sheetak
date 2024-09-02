@@ -8,7 +8,4 @@ function ChildInfo(props) {
   )
 }
 
-export default React.memo(ChildInfo,(pre,curret)=>{
-
-    return pre.p.data.length == curret.p.data.length;
-})
+export default React.memo(ChildInfo)

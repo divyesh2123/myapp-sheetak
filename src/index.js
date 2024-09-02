@@ -25,6 +25,7 @@ import MyRouting from './MyRouting';
 import { BrowserRouter } from 'react-router-dom';
 import ExampleMemo from './ExampleMemo';
 import ShowMoreTextToggle from './ShowMoreTextToggle';
+import ManageCrud from './ManageCrud';
 
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,7 +33,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     
-      <MyRouting/>
+   <ManageCrud/>
 
     </BrowserRouter>
     

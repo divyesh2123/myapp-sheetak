@@ -14,6 +14,10 @@ export default function ExampleMemo() {
 
     }
 
+    const myfunction = React.useCallback(()=>{
+
+    },[])
+
     const handleInput = (e)=>{
         setInput(e.target.value);
     }
@@ -22,7 +26,7 @@ export default function ExampleMemo() {
         <input type='text' name="name" onChange={handleInput}/>
 
         <input type='button' value="save"onClick={manageAdd}/>
-        <ChildInfo p={{data}}/>
+        <ChildInfo p={data} myfunction={myfunction}/>
 
 
     </div>
