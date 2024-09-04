@@ -27,14 +27,21 @@ import ExampleMemo from './ExampleMemo';
 import ShowMoreTextToggle from './ShowMoreTextToggle';
 import ManageCrud from './ManageCrud';
 import MyAPICall1 from './MyAPICall1';
-
+import ABC from './ABC';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import User from './store/User';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    
-   <MyAPICall1/>
+
+      <Provider store={store}>
+          <ABC/>
+          <User/>
+      </Provider>
+     
 
     </BrowserRouter>
     
