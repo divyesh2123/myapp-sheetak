@@ -9,12 +9,12 @@ export default function ABC() {
     const ab = useDispatch();
 
     const myindc = ()=>{
-      ab(INC())
+      ab({type:'INC_AYNC'})
     }
 
     const mydec = ()=>{
 
-      ab(DEC())
+      ab({type:'DEC_AYNC'})
     }
 
   return (
