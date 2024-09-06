@@ -39,7 +39,7 @@ root.render(
 
       <Provider store={store}>
           <ABC/>
-          <User/>
+       
       </Provider>
      
 
