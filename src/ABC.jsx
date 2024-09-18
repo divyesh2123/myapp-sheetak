@@ -17,6 +17,7 @@ export default function ABC() {
       ab({type:'DEC_AYNC'})
     }
 
+    
   return (
     <div>{counter}
         <button onClick={myindc}>+</button>

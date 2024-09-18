@@ -31,6 +31,7 @@ import ABC from './ABC';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import User from './store/User';
+import Parent from './Parent';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,7 +39,7 @@ root.render(
     <BrowserRouter>
 
       <Provider store={store}>
-          <ABC/>
+          <Parent/>
        
       </Provider>
      
