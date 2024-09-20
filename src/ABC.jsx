@@ -1,21 +1,30 @@
 import React from 'react'
-import {useSelector,useDispatch}  from 'react-redux'
+import {useSelector,useDispatch, connect}  from 'react-redux'
 import { DEC, INC } from './action/counterAction';
 
-export default function ABC() {
+const mapStateToProps = (state) => {
 
-    const counter = useSelector(y=>y.counter);
+  return {
+    counter: state.counter
+  }
+}
 
-    const ab = useDispatch();
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // dispatching plain actions
+    myindc: () =>dispatch({type:'INC_AYNC'}),
+    mydec: () => dispatch({type:'DEC_AYNC'}),
+   
+  }
+}
 
-    const myindc = ()=>{
-      ab({type:'INC_AYNC'})
-    }
 
-    const mydec = ()=>{
 
-      ab({type:'DEC_AYNC'})
-    }
+ function ABC({counter,myindc,mydec}) {
+
+   
+
+    
 
     
   return (
@@ -25,3 +34,5 @@ export default function ABC() {
     </div>
   )
 }
+export default connect(mapStateToProps,mapDispatchToProps) (ABC)
+
