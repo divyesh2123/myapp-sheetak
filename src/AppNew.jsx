@@ -6,6 +6,7 @@ import Counter from "./Counter";
 import Login from "./Login";
 import RequireAuth from "./private/requiredAuth";
 import ExampleOfUserFormik from "./ExampleOfUserFormik";
+import MyGridExample from './MyGridExample'
 
 export default function AppNew() {
   
@@ -29,6 +30,7 @@ export default function AppNew() {
 
     { path: "/", element: <Login></Login> },
     { path: "exampleuser", element: <ExampleOfUserFormik /> },
+    {path:"/MyGridExample",element: <MyGridExample></MyGridExample>}
   ]);
 
   return element;
