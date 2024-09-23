@@ -22,7 +22,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import HomeList from './HomeList';
 import Button from './Button';
 import MyRouting from './MyRouting';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link, NavLink } from 'react-router-dom';
 import ExampleMemo from './ExampleMemo';
 import ShowMoreTextToggle from './ShowMoreTextToggle';
 import ManageCrud from './ManageCrud';
@@ -32,14 +32,43 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import User from './store/User';
 import Parent from './Parent';
+import AppNew from './AppNew';
+import CustComLink from './CustComLink';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
 
+    <ul>
+       
+       <li>ngg
+         <Link to='/'>Home</Link>
+       </li>
+      
+       <li>
+         <Link to='/invoices'>Invoices</Link>
+       </li>
+       <li>
+         <Link to='/registration'>Registration</Link>
+       </li>
+       <li>
+         <Link to='/login'>Login</Link>
+       </li>
+
+
+       <li>
+       <CustComLink
+         to="exampleuser"
+        
+       >MyPage
+         </CustComLink>
+       </li>
+    
+   </ul> 
+
       <Provider store={store}>
-          <ABC/>
+          <AppNew/>
        
       </Provider>
      

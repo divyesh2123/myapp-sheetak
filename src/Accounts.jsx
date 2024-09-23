@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import authFetch from './axiosbase/interceptors';
+import { Outlet } from 'react-router-dom';
 //import authFetch from './axiosbase/custom';
 
 export default function Accounts() {
@@ -15,6 +16,9 @@ export default function Accounts() {
 
   },[])
   return (
-    <div>Accounts</div>
+    <div>Accounts
+
+      <Outlet></Outlet>
+    </div>
   )
 }
