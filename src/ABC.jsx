@@ -2,6 +2,8 @@ import React from 'react'
 import {useSelector,useDispatch, connect}  from 'react-redux'
 import { DEC, INC } from './action/counterAction';
 
+
+
 const mapStateToProps = (state) => {
 
   return {
@@ -20,11 +22,12 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
- function ABC({counter,myindc,mydec}) {
+ function ABC({counter,dispatch}) {
 
    
 
-    
+ const  myindc =() =>dispatch({type:'INC_AYNC'});
+ const mydec= () => dispatch({type:'DEC_AYNC'});
 
     
   return (
@@ -34,5 +37,5 @@ const mapDispatchToProps = (dispatch) => {
     </div>
   )
 }
-export default connect(mapStateToProps,mapDispatchToProps) (ABC)
+export default connect(mapStateToProps) (ABC)
 

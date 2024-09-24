@@ -9,7 +9,7 @@ export default function Accounts() {
   const [data,setData]= useState([]);
 
   useEffect(()=>{
-    authFetch.get("accounts").then(y=>{
+    axios.get("http://localhost:4000/accounts").then(y=>{
       setData(y.data);
       console.log(y.data);
     })

@@ -34,6 +34,7 @@ import User from './store/User';
 import Parent from './Parent';
 import AppNew from './AppNew';
 import CustComLink from './CustComLink';
+import   './axiosbase/global';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
